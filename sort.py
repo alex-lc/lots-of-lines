@@ -12,6 +12,8 @@ with open(f"{fname}.txt", 'r') as content:
 
     rtn_list = sorted(lines)
 
-# print content to copy and paste
-for line in rtn_list:
-    print(line)
+# ouput to new .txt file to copy and paste
+with open('output.txt', 'w') as output:
+    for line in rtn_list:
+        output.write(line)
+        output.write("\n")
